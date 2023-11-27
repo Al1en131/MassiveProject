@@ -1,0 +1,101 @@
+footer {
+    background-color: #34C76F;
+    color: #fff;
+    padding: 30px 0;
+    background-size: cover;position: relative;
+    position: relative;
+    margin-top: 50px;
+
+  }
+  
+  .footer-content {
+    display: flex;
+    padding-top: 30px;
+    margin : 0 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+
+  
+  }
+  
+  .footer-section {
+    margin: 0px 46px;
+
+  }
+
+  .footer-section h3{
+    margin-bottom: 15px;
+  }
+  
+  
+  
+  .footer-section p {
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 450;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .playstore-button {
+    display: inline-flex;
+    width: 120px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 1);
+    padding: 5px 5px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    outline: 0;
+    transition: all  .2s ease;
+    text-decoration: none;
+  }
+
+  
+  
+  .playstore-button:hover {
+    background-color: transparent;
+    color: rgba(0, 0, 0, 1);
+  }
+  
+  .icon {
+    height: 16px;
+    width: 16px;
+  }
+  
+  .texts {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1;
+  }
+  
+  .text-1 {
+    margin-bottom: 0.25rem;
+    font-size: 7px;
+    line-height: 0.7;
+  }
+  
+  .text-2 {
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+
+ 
+  

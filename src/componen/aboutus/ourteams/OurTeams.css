@@ -1,0 +1,108 @@
+.wrapper_ourteams {
+  padding-top: 80px;
+  align-content: center;
+}
+
+.wrapper_ourteams_title {
+  text-align: center;
+}
+
+.wrapper_ourteams_title h1 {
+  font-size: 27px;
+}
+
+.wrapper_ourteams_title p {
+  font-size: 20px;
+  padding: 10px 50px;
+}
+
+.wrapper_ourteams_cards {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.wrapper_ourteams_card {
+  padding-bottom: 30px;
+}
+
+.wrapper_ourteams_card img {
+  width: 150px;
+  height: 170px;
+}
+
+.wrapper_ourteams_card h4 {
+  font-size: 21px;
+  padding-top: 20px;
+}
+
+.wrapper_ourteams_card p {
+  font-size: 15px;
+}
+
+/* Medium Screen */
+@media (min-width: 768px) {
+  .wrapper_ourteams_title h1 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  .wrapper_ourteams_title p {
+    font-size: 25px;
+    padding: 10px 90px;
+  }
+
+  .wrapper_ourteams_card img {
+    width: 250px;
+    height: 270px;
+  }
+
+  .wrapper_ourteams_card h4 {
+    font-size: 30px;
+    padding-top: 20px;
+  }
+
+  .wrapper_ourteams_card p {
+    font-size: 20px;
+  }
+}
+
+/*Large Screen*/
+@media (min-width: 992px) {
+  .wrapper_ourteams {
+    padding-top: 80px;
+  }
+
+  .wrapper_ourteams_cards {
+    padding: 10px 50px 0 50px;
+    display: flex;
+    text-align: center;
+  }
+
+  .wrapper_ourteams_card{
+    padding: 0 20px;
+  }
+
+  .wrapper_ourteams_title h1 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  .wrapper_ourteams_title p {
+    font-size: 25px;
+    padding: 30px 300px;
+  }
+
+  .wrapper_ourteams_card img {
+    width: 250px;
+    height: 270px;
+  }
+
+  .wrapper_ourteams_card h4 {
+    font-size: 30px;
+    padding-top: 20px;
+  }
+
+  .wrapper_ourteams_card p {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,128 @@
+#navbarScrollingDropdown {
+    
+}
+
+.profile {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 40px;
+    padding-left: 20px;
+  }
+  
+  .profile a i {
+    text-decoration: none;
+    color: black;
+    font-size: 33px;
+  }
+  
+  .profile-dropdown {
+    position: relative;
+    display: inline-block;
+   
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    bottom : -250px;
+    left: -180px;
+  }
+
+  .infoprofile {
+    border-bottom: 1px solid #ccc;
+
+  }
+  
+  .profile-info {
+    padding: 10px;
+    align-items: center;
+    
+    display: flex;
+  }
+  
+  #profile-image {
+  
+    margin-left: 10px;
+  
+  }
+
+  .button-profile{
+    text-align: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .button-profile a{
+    text-align: center;
+    padding: 2px 70px;
+    align-items: center;
+    border-radius: 20px;
+    background-color: white;
+    color: #34C76F;
+    border-style: none;
+    border: 1px solid #34C76F;
+    width: 180px;
+    height: 25px;
+    font-weight: 500;
+}
+
+.button-profile a:hover {
+    letter-spacing: 2px;
+
+}
+  
+  .profile-name {
+    margin-left: 10px;
+    line-height: 0.5;
+    margin-top: 9px;
+  }
+  
+  .Account{
+    border-bottom: 1px solid #ccc;
+    line-height: 0.5;
+    margin-top: 10px;
+
+  }
+
+  .Account h5{
+    margin-left: 15px;
+  }
+
+  .Account a {
+    color: black;
+    padding: 9px 16px;
+    text-decoration: none;
+    display: flex;
+  }
+  
+  .Account a:hover {
+    background-color: #34C76F;
+    letter-spacing: 2px;
+    color: white;
+  }
+
+
+
+  .keluar a {
+    color: black;
+    padding: 9px 16px;
+    text-decoration: none;
+    display: flex;
+  }
+  
+  .keluar a:hover {
+    background-color: #34C76F;
+    letter-spacing: 2px;
+    color: white;
+  }
+  
+  .profile-dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /*  */
+  

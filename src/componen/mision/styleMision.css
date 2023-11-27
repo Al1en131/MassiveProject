@@ -1,0 +1,102 @@
+/* Small Screen */
+
+
+/* Medium Screen */
+@media (min-width: 768px) {
+    .container-mision{
+        padding: 50px;
+   
+        
+    }
+
+    .mision_left {
+        text-align: center;
+    }
+
+    .mision_left img{
+        width: 350px;
+        padding-top: 30px;
+    }
+
+    .mision_right {
+        padding: 50px 30px;
+    }
+
+    .card-mision {
+        display: flex;
+    }
+
+   .card-mision h1 {
+    padding-top: 25px;
+   }
+}
+    
+
+/* Large Screen */
+@media (min-width: 992px) {
+    .container-mision{
+        display: flex;
+        padding: 12px 16px;
+         margin-top: 80px;
+    
+     
+    }
+    
+    .mision_left img {
+        width : 400px;
+        height: 340px;
+        padding: 20px;
+        margin-left: 70px;
+    }
+    
+    .mision_right {
+        margin-left: 90px;
+    
+    
+    
+    }
+    
+    .mision_right h1{
+        font-size: 36px;
+        margin-top: 30px;
+    
+    
+     
+    
+    }
+    
+    .mision_right p{
+        font-size: 16px;
+        color: grey;
+        margin-top: 25px;
+        line-height: 1.5;
+    
+    
+    
+    
+    }
+    
+    .card-mision {
+        display: flex;
+        margin-top: 25px;
+        margin-right: 50px;
+
+    
+    }
+
+    .card-mision h1 {
+        padding-top: 0px;
+       }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
