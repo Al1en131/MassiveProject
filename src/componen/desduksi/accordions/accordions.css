@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+.container-accordion {
+  display: flex;
+  margin: 100px;
+}
+
+.item {
+  height: 50%;
+  width: 500px;
+}
+.accord1 {
+  margin-left: 50px;
+  width: 50%;
+}
+.accord2 {
+  text-align: right;
+  margin-left: 100px;
+}

@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+.desduksi {
+  background-color: white;
+  width: 1100px;
+  height: 404px;
+  border-radius: 7px;
+  margin-bottom: 50px;
+}
+
+.text_left {
+  margin-top: 12%;
+  margin-left: 30px;
+  padding-bottom: 60px;
+  padding-right: 99px;
+  padding-left: 120px;
+  width: 50%;
+  height: 80%;
+  justify-content: center;
+}
+
+.img-desduksi img {
+  padding: 0;
+  width: 47.5%;
+  height: 50%;
+  border-radius: 10px;
+  float: right;
+}

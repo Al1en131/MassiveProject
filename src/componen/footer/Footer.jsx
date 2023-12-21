@@ -158,7 +158,14 @@ function Footer() {
                   </svg>
                   <span class="texts">
                     <span class="text-1">GET IT ON</span>
-                    <span class="text-2">Google Play</span>
+                    <span
+                      class="text-2"
+                      style={{
+                        fontSize: "10px",
+                      }}
+                    >
+                      Google Play
+                    </span>
                   </span>
                 </a>
               </li>

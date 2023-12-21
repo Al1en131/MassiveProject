@@ -1,128 +1,224 @@
-#navbarScrollingDropdown {
-    
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.centered-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.smaller-image {
+  max-width: 200px;
+  max-height: 180px;
 }
 
 .profile {
-    padding-top: 2px;
-    padding-bottom: 2px;
-    padding-right: 40px;
-    padding-left: 20px;
-  }
-  
-  .profile a i {
-    text-decoration: none;
-    color: black;
-    font-size: 33px;
-  }
-  
-  .profile-dropdown {
-    position: relative;
-    display: inline-block;
-   
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    bottom : -250px;
-    left: -180px;
-  }
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 40px;
+  padding-left: 20px;
+}
 
-  .infoprofile {
-    border-bottom: 1px solid #ccc;
+.profile a i {
+  text-decoration: none;
+  color: black;
+  font-size: 33px;
+}
 
-  }
-  
-  .profile-info {
-    padding: 10px;
-    align-items: center;
-    
-    display: flex;
-  }
-  
-  #profile-image {
-  
-    margin-left: 10px;
-  
-  }
+.profile-dropdown {
+  position: relative;
+  display: inline-block;
+}
 
-  .button-profile{
-    text-align: center;
-    align-items: center;
-    margin-bottom: 10px;
-  }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 220px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  bottom: -250px;
+  left: -180px;
+}
 
-  .button-profile a{
-    text-align: center;
-    padding: 2px 70px;
-    align-items: center;
-    border-radius: 20px;
-    background-color: white;
-    color: #34C76F;
-    border-style: none;
-    border: 1px solid #34C76F;
-    width: 180px;
-    height: 25px;
-    font-weight: 500;
+.infoprofile {
+  border-bottom: 1px solid #ccc;
+}
+
+.profile-info {
+  padding: 10px;
+  align-items: center;
+
+  display: flex;
+}
+
+#profile-image {
+  margin-left: 10px;
+}
+
+.button-profile {
+  text-align: center;
+  align-items: center;
+}
+
+.button-profile a {
+  text-align: center;
+  padding: 2px 70px;
+  align-items: center;
+  border-radius: 20px;
+  background-color: white;
+  color: #34c76f;
+  border-style: none;
+  border: 1px solid #34c76f;
+  width: 180px;
+  height: 25px;
+  font-weight: 500;
 }
 
 .button-profile a:hover {
-    letter-spacing: 2px;
-
+  letter-spacing: 1px;
 }
-  
-  .profile-name {
-    margin-left: 10px;
-    line-height: 0.5;
-    margin-top: 9px;
-  }
-  
-  .Account{
-    border-bottom: 1px solid #ccc;
-    line-height: 0.5;
-    margin-top: 10px;
 
-  }
+.profile-name {
+  margin-left: 10px;
+  line-height: 0.5;
+  margin-top: 9px;
+}
 
-  .Account h5{
-    margin-left: 15px;
-  }
+.Account {
+  border-bottom: 1px solid #ccc;
+  line-height: 0.5;
+  margin-top: 10px;
+}
 
-  .Account a {
-    color: black;
-    padding: 9px 16px;
-    text-decoration: none;
-    display: flex;
-  }
-  
-  .Account a:hover {
-    background-color: #34C76F;
-    letter-spacing: 2px;
-    color: white;
-  }
+.Account h5 {
+  margin-left: 15px;
+}
 
+.Account a {
+  color: black;
+  padding: 9px 16px;
+  text-decoration: none;
+  display: flex;
+}
 
+.Account a:hover {
+  background-color: #34c76f;
+  letter-spacing: 2px;
+  color: white;
+}
 
-  .keluar a {
-    color: black;
-    padding: 9px 16px;
-    text-decoration: none;
-    display: flex;
-  }
-  
-  .keluar a:hover {
-    background-color: #34C76F;
-    letter-spacing: 2px;
-    color: white;
-  }
-  
-  .profile-dropdown:hover .dropdown-content {
-    display: block;
-  }
+.keluar a {
+  color: black;
+  padding: 9px 16px;
+  text-decoration: none;
+  display: flex;
+}
 
-  /*  */
-  
+.keluar a:hover {
+  background-color: #34c76f;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.profile-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.button-container a:hover {
+  background-color: #34c76f;
+  letter-spacing: 0.5px;
+  color: white;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #34c76f;
+  background-color: #34c76f;
+  color: white;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+button.close {
+  border-radius: 15px;
+}
+button.close:hover {
+  background-color: white;
+  border-color: white;
+  color: grey;
+}
+.modal_contact {
+  display: flex;
+  height: 50vh;
+}
+
+.modal_contact_form h1 {
+  font-size: 15px;
+  padding-left: 15px;
+  line-height: 3;
+}
+
+.select_contact {
+  padding-left: 11px;
+}
+
+.wraper_information {
+  display: flex;
+}
+
+.modal_contact_form button {
+  background-color: #34c76f;
+  border-radius: 3px;
+  width: 400px;
+  height: 30px;
+  color: #f9f9f9;
+  border-style: none;
+}
+
+.contact_button {
+  padding-left: 16px;
+}
+
+.modal_contact_information {
+  padding-left: 25px;
+}
+
+.information_contact {
+  padding-top: 10px;
+}
+
+.information_contact h6 {
+  padding-left: 25px;
+}
+
+.information_contact ul {
+  list-style: none;
+}
+
+.information_contact img {
+  width: 10px;
+  margin-right: 10px;
+}

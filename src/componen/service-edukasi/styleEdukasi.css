@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.hero-edukasi {
+  display: flex;
+}
+
+.bg-image {
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.deskripsi-content1 button,
+.deskripsi-content2 button,
+.deskripsi-content3 button {
+  margin-top: 25px;
+  background-color: #34c76f;
+  color: white;
+  border-style: none;
+  width: 193px;
+  height: 40px;
+  font-size: 20px;
+}
+
+.deskripsi-content1 button:hover,
+.deskripsi-content2 button:hover,
+.deskripsi-content3 button:hover {
+  color: #34c76f;
+  background-color: white;
+  border: 1px solid #34c76f;
+}
+
+.join-content {
+  background-color: rgb(210, 210, 210);
+  width: 85vw;
+  height: 60vh;
+  margin-bottom: 30px;
+  margin: 0 85px;
+  display: flex;
+  padding: 80px 85px;
+}
+.join-deskripsi {
+  margin-top: 50px;
+  margin-right: 200px;
+}
+
+.join-image {
+  margin-left: 200px;
+}

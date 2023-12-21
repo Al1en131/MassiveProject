@@ -6,16 +6,13 @@ export const HeroAbout = () => {
   return (
     <>
       <div className="wrapper_about">
-        <div className="wrapper_about_left">
+        <div className="wrapper_about_left" style={{ marginTop: "70px" }}>
           <h1>ABOUT US</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-            condimentum lectus nec orci convallis facilisis. Ut tincidunt
-            sodales nisi nec tincidunt. Praesent sit amet lobortis nunc. Morbi
-            euismod lorem vel auctor tincidunt. Etiam posuere metus ut urna
-            maximus, sit amet lobortis lacus bibendum. Integer sodales, mauris
-            vitae pharetra ultrices, dui dui scelerisque dolor, euismod aliquam
-            massa odio ut metus.
+            GoPaper was only established in 2023 to provide information
+            facilities to manage paper waste practically and earn money just by
+            exchanging unused paper. We also present tips & tricks for those who
+            want to turn paper waste into crafts.
           </p>
         </div>
         <div className="wrapper_about_right">

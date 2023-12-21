@@ -7,13 +7,17 @@ const Hero = () => {
     <>
       <div className="wrapper">
         <div className="wrapper_left">
-          <img src="../../public/img/heroAbout.png" alt=""></img>
+          <img
+            src="../../public/img/heroAbout.png"
+            alt=""
+            style={{ width: "500px", height: "500px" }}
+          ></img>
         </div>
         <div className="wrapper_right">
           <h1>GoPaper</h1>
           <p>
-            Dengan GoPaper anda bisa menukarkan kertas bekas dengan uang dan
-            bisa membuat rumah anda tidak sumpek di penuhi oleh kertas bekas
+            With GoPaper you can exchange waste paper for money and can make
+            your home less cluttered with waste paper.
           </p>
         </div>
       </div>

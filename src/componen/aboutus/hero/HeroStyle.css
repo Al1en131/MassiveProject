@@ -82,7 +82,7 @@
 @media (min-width: 1480px) {
   .wrapper {
     display: flex;
-    padding: 50px 50px 0 50px;
+    padding: 50px 50px 50px 50px;
   }
 
   .wrapper_left img {
@@ -100,7 +100,7 @@
   }
 
   .wrapper_right p {
-    font-size: 24px;
+    font-size: 20px;
     padding: 0 255px;
     font-style: bold;
     color: #aaaaaa;

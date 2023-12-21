@@ -8,9 +8,8 @@ export const OurTeams = () => {
         <div className="wrapper_ourteams_title">
           <h1>MEET OUR TEAMS</h1>
           <p>
-            Kami dengan bangga memperkenalkan tim kami dari Frinight, yang
-            terdiri dari individu yang berkomitmen tinggi untuk mencapai
-            kesuksesan bersama.
+            We are proud to introduce our team from Frinight, which consists of
+            individuals who are highly committed to achieving success together.
           </p>
         </div>
         <div className="wrapper_ourteams_cards">

@@ -1,15 +1,36 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "./StyleProfile.css";
 import React from "react";
-import { Container, Image, Button, Row, Col, Card } from "react-bootstrap";
-import { FaPen, FaBell } from "react-icons/fa";
-import { CiShare2 } from "react-icons/ci";
-import { AiOutlineDownload } from "react-icons/ai";
-import Navlist from "../navlist/Navlist";
-import Footer from "../footer/Footer";
+
+import {
+  Container,
+  Image,
+  Button,
+  Row,
+  Col,
+  Card,
+  Modal,
+} from "react-bootstrap";
+
+import { FaBell } from "react-icons/fa";
+import { BsPencilFill, BsFillCameraFill, BsInfoSquare } from "react-icons/bs";
+import Footer from "../footer/Footer.jsx";
+import Navlist from "../navlist/Navlist.jsx";
+import LanguageSettings from "./language/Language.jsx";
+import EditAbout from "./editabout/editAbout.jsx";
+import Profileurl from "./profileurl/Profileurl.jsx";
+import EditProfile from "./editprofile/EditProfile.jsx";
+import FormEdit from "./formedit/FormEdit.jsx";
 
 function Profile() {
-  const [showAbout, setShowAbout] = useState(false); // State untuk menampilkan konten About
+  const [showModal, setShowModal] = useState(false);
+  const fileInputRef = useRef(null);
+  const [modalImage, setModalImage] = useState(
+    "https://cdn.pixabay.com/photo/2016/03/09/14/40/office-1246484_1280.jpg"
+  );
+  const [selectedImage, setSelectedImage] = useState(
+    "https://cdn.pixabay.com/photo/2016/03/09/14/40/office-1246484_1280.jpg"
+  );
   const handleIconClick = (iconName) => {
     console.log(`Icon ${iconName} clicked!`);
   };
@@ -18,202 +39,206 @@ function Profile() {
     setShowAbout(!showAbout);
   };
 
-  const blackIconStyle = {
-    color: "black", // Mengubah warna ikon menjadi hitam
+  const handleShow = () => {
+    setShowModal(true);
   };
+
+  const handleClose = () => {
+    setShowModal(false);
+  };
+
+  //icon abu
   const greyCircleStyle = {
-    backgroundColor: "lightgrey", // Warna latar belakang bulatan
-    borderRadius: "55%", // Membuatnya menjadi lingkaran
-    padding: "5px",
-    display: "inline-flex",
-    transition: "background-color 0.3s ease",
+    backgroundColor: "lightgrey",
+    borderRadius: "50%",
+    width: "40px",
+    height: "40px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   };
 
-  //card About
-  const [aboutText, setAboutText] = useState(
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit accusamus suscipit id facere ratione debitis, perferendis facilis atque alias. Fugit accusamus suscipit id facere ratione debitis, perferendis facilis atque alias."
-  );
-  const [editMode, setEditMode] = useState(false);
-
-  const handleEditAbout = () => {
-    setEditMode(true);
+  //kamera
+  const whiteCircleStyleKamera = {
+    backgroundColor: "white",
+    borderRadius: "50%",
+    width: "25px",
+    height: "25px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   };
 
-  const handleAboutSave = () => {
-    setEditMode(false);
+  //notif
+  const greenCircle = {
+    backgroundColor: "#34C76F",
+    borderRadius: "50%",
+    width: "40px",
+    height: "40px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   };
 
-  const handleInputChange = (e) => {
-    setAboutText(e.target.value);
+  const handleSave = () => {
+    setSelectedImage(modalImage);
+    console.log("Foto disimpan:", setSelectedImage);
+    setShowModal(false);
   };
-  const iconStyle = {
-    color: "black",
-    fontSize: "1.2em",
+
+  const handlePhotoChange = () => {
+    fileInputRef.current.click();
+  };
+
+  const handleFileSelected = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setModalImage(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
   };
 
   return (
     <>
       <Navlist />
-      <div className="Profile" style={{ paddingTop: "40px" }}>
+      <div className="Profile" style={{ paddingTop: "50px" }}>
         <Container>
           <Row>
             <Col md={8}>
               <Card className="mb-3">
                 <Card.Img
-                  src="https://cdn.pixabay.com/photo/2016/03/09/14/40/office-1246484_1280.jpg"
+                  src={selectedImage}
                   width="10"
                   height="280"
-                  alt="Profile Picture"
+                  alt="Bcakground Photo"
                 />
-                <Image
-                  src="https://www.copaster.com/wp-content/uploads/2023/03/pp-kosong-wa-default.jpeg"
-                  roundedCircle
-                  width="110"
-                  height="110"
-                  style={{ margin: "1.3em", marginTop: "-65px" }}
-                  alt="Profile Pic"
-                />
-                <Card.Body>
-                  <h4 className="d-flex justify-content-between align-items-center">
-                    Hajime Isayama
+
+                <div>
+                  {/* Konten lain di dalam EditProfile.jsx */}
+                  <EditProfile />
+                  {/* Konten lain di dalam EditProfile.jsx */}
+                </div>
+
+                <Button variant="link" onClick={handleShow}>
+                  <div
+                    style={{
+                      ...whiteCircleStyleKamera,
+                      position: "absolute",
+                      top: "10px",
+                      right: "10px",
+                    }}
+                  >
+                    <BsFillCameraFill
+                      style={{ fontSize: "0.9em", color: "#34C76F" }}
+                    />
+                  </div>
+                </Button>
+
+                {/* card untuk background photo */}
+                <Modal size="lg" show={showModal} onHide={handleClose}>
+                  <Modal.Header style={{ border: "0" }} closeButton>
+                    <Modal.Title>Background Photo</Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    {/* Konten modal kamera */}
+                    <Image
+                      width="680px"
+                      style={{
+                        width: "680px",
+                        height: "360px",
+                        objectFit: "cover",
+                      }}
+                      src={modalImage}
+                      fluid
+                    />
+                  </Modal.Body>
+                  <div
+                    className="button-container"
+                    style={{
+                      textAlign: "right",
+                      marginBottom: "10px",
+                    }}
+                  >
+                    <label htmlFor="upload-photo">
+                      <Button
+                        variant="outline-success"
+                        as="span"
+                        style={{
+                          borderRadius: "25px",
+                          width: "150px",
+                          margin: "10px",
+                          fontSize: "18px",
+                        }}
+                      >
+                        Change Photo
+                      </Button>
+                    </label>
+                    <input
+                      type="file"
+                      id="upload-photo"
+                      accept="image/*"
+                      style={{ display: "none" }}
+                      onChange={handleFileSelected}
+                    />
                     <Button
-                      variant="link"
-                      onClick={() => handleIconClick("Edit")}
+                      variant="outline-success"
+                      onClick={handleSave}
+                      style={{
+                        borderRadius: "25px",
+                        width: "75px",
+                        margin: "10px",
+                        fontSize: "18px",
+                      }}
                     >
-                      <div style={greyCircleStyle}>
-                        <FaPen
-                          style={{ ...blackIconStyle, fontSize: "1.2em" }}
-                        />
-                      </div>
+                      Apply
                     </Button>
-                  </h4>
-                  <p>
-                    "DUTA KEBERSIHAN SINGEKINO KYOJIN" <br />
-                  </p>
-                  Lampung Selatan, Lampung, Indonesia.
-                  <p style={{ color: "green" }}> Connect Information</p>
-                  <Button
-                    type="submit"
-                    variant="outline-success"
-                    className="custom-button"
-                    onClick={handleAboutProfileClick}
-                    style={{
-                      borderRadius: "25px",
-                      width: "150px",
-                      marginRight: "10px",
-                    }}
-                  >
-                    About Profile
-                  </Button>{" "}
-                  <Button
-                    type="submit"
-                    variant="outline-success"
-                    className="custom-button"
-                    style={{
-                      borderRadius: "25px",
-                      width: "150px",
-                      marginRight: "10px",
-                    }}
-                  >
-                    <CiShare2 /> Share Profile
-                  </Button>{" "}
-                  <Button
-                    type="submit"
-                    variant="outline-success"
-                    className="custom-button"
-                    style={{ borderRadius: "25px", width: "150px" }}
-                  >
-                    <AiOutlineDownload /> Save as PDF
-                  </Button>{" "}
-                </Card.Body>
+                  </div>
+                </Modal>
+
+                <FormEdit />
               </Card>
 
-              <Card>
-                <Card.Body>
-                  <h4 className="d-flex justify-content-between align-items-center">
-                    About
-                    <Button variant="link" onClick={handleEditAbout}>
-                      <FaPen style={iconStyle} />
-                    </Button>
-                  </h4>
-                  {editMode ? (
-                    <div>
-                      <textarea
-                        rows="4"
-                        cols="88"
-                        value={aboutText}
-                        onChange={handleInputChange}
-                      />{" "}
-                      <br />
-                      <Button
-                        type="submit"
-                        variant="success"
-                        className="button-card align-items-right"
-                        onClick={handleAboutSave}
-                        style={{ borderRadius: "25px", width: "100px" }}
-                      >
-                        {" "}
-                        Save
-                      </Button>
-                    </div>
-                  ) : (
-                    <p>{aboutText}</p>
-                  )}
-                </Card.Body>
-              </Card>
+              <div>
+                {/* Konten lain di dalam About.jsx */}
+                <EditAbout />
+
+                {/* Konten lain di dalam About.jsx */}
+              </div>
             </Col>
 
             <Col md={4}>
-              <Card className="mb-3">
+              <Card className="mb-3" style={{ border: "0.5px solid #34C76F" }}>
                 <Card.Body>
                   <Card.Title className="d-flex justify-content-between align-items-center">
                     Notification
-                    <Button
-                      variant="link"
-                      onClick={() => handleIconClick("Notification")}
-                    >
-                      <div style={greyCircleStyle}>
-                        <FaBell
-                          style={{ ...blackIconStyle, fontSize: "1.2em" }}
-                        />
-                      </div>
-                    </Button>
+                    <div style={greenCircle}>
+                      <FaBell style={{ fontSize: "1.1em", color: "white" }} />
+                    </div>
                   </Card.Title>
                   <Card.Text>No Notification</Card.Text>
                 </Card.Body>
               </Card>
+
               <Card>
-                <Card.Body>
-                  <Card.Title className="d-flex justify-content-between align-items-center">
-                    Language Settings
-                    <Button
-                      variant="link"
-                      onClick={() => handleIconClick("Edit")}
-                    >
-                      <div style={greyCircleStyle}>
-                        <FaPen
-                          style={{ ...blackIconStyle, fontSize: "1.2em" }}
-                        />
-                      </div>
-                    </Button>
-                  </Card.Title>
-                  <Card.Text>English</Card.Text>
-                  <hr />
-                  <Card.Title className="d-flex justify-content-between align-items-center">
-                    Profile URL
-                    <Button
-                      variant="link"
-                      onClick={() => handleIconClick("Edit")}
-                    >
-                      <div style={greyCircleStyle}>
-                        <FaPen
-                          style={{ ...blackIconStyle, fontSize: "1.2em" }}
-                        />
-                      </div>
-                    </Button>
-                  </Card.Title>
-                  <Card.Text>www.gopaper.com/isayama</Card.Text>
-                </Card.Body>
+                <div>
+                  {/* Konten lain di dalam Language.jsx */}
+                  <LanguageSettings />
+                  {/* Konten lain di dalam Language.jsx */}
+                  <hr style={{ border: "px solid #000", margin: "0 auto" }} />
+
+                  {/* Konten lain di dalam Profileurl.jsx */}
+                  <Profileurl />
+                  {/* Konten lain di dalam Profileurl.jsx */}
+                </div>
               </Card>
             </Col>
           </Row>

@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
-:root{
+:root {
   --font-color: #393939;
 }
-
 
 * {
   font-family: "Poppins", sans-serif;
@@ -18,29 +17,30 @@
 }
 
 .login-container {
-  background: #FFFFFF;
+  background: #ffffff;
   width: 70%;
-  height: 78%;
+  height: 75%;
   border-radius: 10px;
-  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 20px 20px rgba(2, 2, 2, 0.1);
   display: flex;
 }
 
-.lgn-btn{
+.lgn-btn {
   margin-bottom: 10px;
-  background: white;
 }
 
-.lgn-btn Button:hover{
-  background-color: #34C76F;
+.lgn-btn Button:hover {
+  background-color: #34c76f;
+  color: white;
 }
 
-.lgn-btn Button{
-  background-color: #FFFFFF;
+.lgn-btn Button {
   color: #393939;
   font-size: 14px;
   border-color: #393939;
-  
+  justify-content: center;
+  width: 100%;
+  border-radius: 25px;
 }
 
 .login-form {
@@ -58,10 +58,14 @@
   text-align: center;
   font-size: 24px;
   margin-bottom: 40px;
-  color: #34C76F;
+  color: #34c76f;
   font-weight: 600;
 }
-
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 8px;
+}
 .label {
   display: block;
   font-weight: 500;
@@ -75,7 +79,7 @@
 }
 
 .login-btn Button {
-  background: #34C76F;
+  background: #34c76f;
   width: 100%;
   color: #fff;
   margin-top: 10px;
@@ -84,21 +88,15 @@
   border-radius: 0;
 }
 
-.login-btn Button:hover{
-  background-color: #34C76F;
+.login-btn Button:hover {
+  background-color: #34c76f;
 }
 
 .img-right img {
   padding: 0;
   margin-left: 170px;
-  width: 75%;
-  height: 526.5px;
+  width: 70%;
+  height: 499px;
   border-radius: 10px;
   float: right;
-  
 }
-
-
-
-
-

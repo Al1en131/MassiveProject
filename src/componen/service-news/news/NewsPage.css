@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* Medium Screen */
+@media (min-width: 768px) {
+  .news-left {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 22px;
+    padding: 25px 0;
+  }
+
+  .news-left h2 {
+    font-weight: 700;
+  }
+
+  .font {
+    margin-top: 40px;
+    font-weight: 500;
+  }
+}
+
+/*Newspage2*/
+.container-news,
+.container-news2,
+.container-news3 {
+  margin: 100px;
+}
+
+/*Newspage3*/
+.font3 {
+  margin-top: 40px;
+}
+
+.cr:hover {
+  box-shadow: 5px 5px 8px 5px rgba(0.2, 0.2, 0.2, 0.2);
+
+  transform: translateY(-10px);
+}

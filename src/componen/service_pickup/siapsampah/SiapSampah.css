@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+.text-center h1:hover {
+  letter-spacing: 2px;
+}
+
+.container-sampah {
+  display: flex;
+  padding-top: 70px;
+  margin-left: 90px;
+  margin-right: 90px;
+}
+.sampahcontainer_left {
+  margin-top: 50px;
+  justify-content: left;
+  width: 500px;
+}
+
+.sampahcontainer_left h3:hover {
+  letter-spacing: 1.5px;
+}
+
+.imgsampahcontainer img {
+  width: 396px;
+  height: 332px;
+  padding-right: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.sampahcontainer_right {
+  width: 500px;
+  margin-top: 50px;
+  text-align: right;
+}
+
+.sampahcontainer_right h3:hover {
+  letter-spacing: 1.5px;
+}

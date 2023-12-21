@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+.wrapper {
+  padding: auto;
+}
+
+.wrapper img {
+  height: 125px;
+  width: 125px;
+}
+
+.h1 {
+  font-size: 20px;
+}
+
+.wrapper_choose_card {
+  padding: 10px 60px 0 60px;
+}
+
+.wrapper_choose_card p {
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+.wrapper_choose_card img {
+  margin-top: 30px;
+  width: 150px;
+}
+.wrapper_choose_card:hover {
+  transform: translateY(-30px);
+}
+
+.penimbangan {
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.penimbangan h1:hover {
+  letter-spacing: 2px;
+}
+
+.penimbangan img {
+  padding-top: 70px;
+  width: 430px;
+}
